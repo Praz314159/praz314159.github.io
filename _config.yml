@@ -1,0 +1,7 @@
+title: Prashanth Ramakrishna
+description: Personal site of Prashanth Ramakrishna
+url: https://praz314159.github.io
+markdown: kramdown
+permalink: /writing/:year/:month/:title/
+exclude:
+  - README.md

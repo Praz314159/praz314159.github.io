@@ -1,58 +1,54 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prashanth Ramakrishna</title>
-  <meta name="description" content="Personal site of Prashanth Ramakrishna">
-  <style>
-    :root { --bg: #fdfdfc; --fg: #1d1d1f; --muted: #6b6b70; --link: #2f5fd0; }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #141416; --fg: #e8e8ea; --muted: #9a9aa2; --link: #8fb0ff; }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; background: var(--bg); color: var(--fg);
-      font: 17px/1.65 Georgia, "Iowan Old Style", "Times New Roman", serif;
-    }
-    main { max-width: 640px; margin: 0 auto; padding: 72px 20px; }
-    h1 { font-size: 2rem; margin: 0 0 4px; font-weight: 600; }
-    h2 { font-size: 1.1rem; margin: 40px 0 8px; text-transform: uppercase;
-         letter-spacing: .06em; color: var(--muted); font-family: system-ui, sans-serif; }
-    .tagline { color: var(--muted); margin: 0 0 32px; }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul { padding-left: 1.1em; }
-    nav a { margin-right: 18px; font-family: system-ui, sans-serif; font-size: .95rem; }
-    footer { margin-top: 64px; color: var(--muted); font-size: .85rem; }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Prashanth Ramakrishna</h1>
-    <p class="tagline">One-line description of what you do.</p>
+---
+layout: default
+---
+<section id="about" class="intro">
+  <!-- Optional photo: put a file at assets/img/me.jpg and uncomment.
+  <img class="photo" src="{{ '/assets/img/me.jpg' | relative_url }}" alt="Photo of Prashanth Ramakrishna"> -->
+  <h1>Prashanth Ramakrishna</h1>
+  <p class="affil">Role / Title<br>Institution or Organization</p>
+  <p class="social">
+    <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a>
+    <a href="https://github.com/Praz314159">GitHub</a>
+    <a href="mailto:you@example.com">Email</a>
+    <a href="https://x.com/YOUR_HANDLE">X</a>
+  </p>
+  <p>A short bio paragraph: what you work on, where, and with whom.</p>
+  <p><strong>Research interests:</strong> topic one, topic two, topic three.</p>
+</section>
 
-    <nav>
-      <a href="https://github.com/Praz314159">GitHub</a>
-      <!-- <a href="mailto:you@example.com">Email</a> -->
-      <!-- <a href="https://www.linkedin.com/in/your-handle">LinkedIn</a> -->
-    </nav>
+<section id="projects">
+  <h2>Projects</h2>
+  <ul class="entries">
+    <li><a href="#"><strong>Project name</strong></a> — One-line description.</li>
+  </ul>
+</section>
 
-    <h2>About</h2>
-    <p>A short paragraph about yourself, your interests, and what you're working on.</p>
+<section id="papers">
+  <h2>Papers</h2>
+  <p class="note">(* = first author(s).)</p>
+  <ul class="entries">
+    <li>
+      <a class="title" href="#">Paper Title</a>
+      <span class="extra"><a href="#">ePrint</a> <a href="#">arXiv</a> <a href="#">Slides</a></span><br>
+      <span class="authors">Prashanth Ramakrishna*, Coauthor</span><br>
+      <span class="venue">Venue Year</span>
+    </li>
+  </ul>
+</section>
 
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="#">Project one</a>: a one-sentence description.</li>
-      <li><a href="#">Project two</a>: a one-sentence description.</li>
-    </ul>
+<section id="talks">
+  <h2>Talks</h2>
+  <ul class="entries">
+    <li>
+      Talk Title<br>
+      <span class="venue">Venue (Mon YYYY), <a href="#">Another Venue</a> (Mon YYYY)</span>
+    </li>
+  </ul>
+</section>
 
-    <h2>Writing</h2>
-    <ul>
-      <li><a href="#">Post or paper title</a></li>
-    </ul>
-
-    <footer>© 2026 Prashanth Ramakrishna</footer>
-  </main>
-</body>
-</html>
+<section id="work">
+  <h2>Work History</h2>
+  <ul class="entries">
+    <li><strong>Organization</strong>, Role <span class="dates">YYYY–present</span></li>
+  </ul>
+</section>

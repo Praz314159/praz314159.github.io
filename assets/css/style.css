@@ -1,0 +1,66 @@
+:root {
+  --bg: #fdfdfc; --fg: #1d1d1f; --muted: #6b6b70; --rule: #e4e4e0;
+  --link: #2f5fd0; --nav-bg: rgba(253, 253, 252, 0.92);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141416; --fg: #e8e8ea; --muted: #9a9aa2; --rule: #2c2c30;
+    --link: #8fb0ff; --nav-bg: rgba(20, 20, 22, 0.92);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.65 Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.site-nav {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--nav-bg); backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule);
+  font-family: system-ui, -apple-system, sans-serif; font-size: .92rem;
+}
+.site-nav nav {
+  max-width: 720px; margin: 0 auto; padding: 12px 20px;
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px;
+}
+.site-nav .home { color: var(--fg); font-weight: 600; }
+.site-nav .links a { margin-left: 14px; color: var(--muted); }
+.site-nav .links a:first-child { margin-left: 0; }
+.site-nav .links a:hover { color: var(--link); }
+
+main { max-width: 720px; margin: 0 auto; padding: 40px 20px 24px; }
+h1 { font-size: 2rem; margin: 0 0 6px; font-weight: 600; line-height: 1.2; }
+h2 {
+  font-size: 1.3rem; font-weight: 600; margin: 48px 0 12px;
+  padding-bottom: 4px; border-bottom: 1px solid var(--rule);
+}
+.photo { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; float: right; margin: 0 0 12px 20px; }
+.affil { color: var(--muted); margin: 0 0 10px; }
+.social { font-family: system-ui, -apple-system, sans-serif; font-size: .95rem; }
+.social a { margin-right: 16px; }
+.note, .meta, .back { color: var(--muted); font-size: .9rem; }
+
+.entries, .post-list { list-style: none; padding: 0; }
+.entries li, .post-list li { margin-bottom: 16px; }
+.extra a { font-family: system-ui, -apple-system, sans-serif; font-size: .8rem; margin-left: 8px; }
+.authors { color: var(--fg); }
+.venue { color: var(--muted); font-style: italic; }
+.dates { color: var(--muted); font-size: .9rem; margin-right: 8px; }
+.entries .dates { float: right; margin-right: 0; }
+
+.post h1 { margin-top: 8px; }
+.post pre { overflow-x: auto; padding: 12px; background: var(--rule); border-radius: 4px; font-size: .85rem; }
+.post img { max-width: 100%; }
+
+footer {
+  max-width: 720px; margin: 0 auto; padding: 32px 20px 48px;
+  color: var(--muted); font-size: .85rem;
+}
+@media (max-width: 560px) {
+  .site-nav nav { flex-direction: column; }
+  .photo { float: none; display: block; margin: 0 0 16px; }
+}
